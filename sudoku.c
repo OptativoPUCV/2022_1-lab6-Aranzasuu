@@ -50,7 +50,7 @@ int is_valid(Node* n){
     // Revisar por columna
     for(i = 0; i < 9; i++){
         for(j = 0; j < 9; j++){
-            for(k = 0; k < 9; k++){
+            for(k = j + 1; k < 9; k++){
                 if(n->sudo[i][j] == n->sudo[i][k]) return 0;
             }
         }
@@ -59,7 +59,7 @@ int is_valid(Node* n){
     // Revisar por fila
     for(i = 0; i < 9; i++){
         for(j = 0; j < 9; j++){
-            for(k = 0; k < 9; k++){
+            for(k = i + 1; k < 9; k++){
                 if(n->sudo[i][j] == n->sudo[k][j]) return 0;
             }
         }
