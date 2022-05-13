@@ -45,7 +45,7 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
 
-    int i, j, k;
+    int i, j, k, ii, jj;
 
     // Revisar por columna
     for(i = 0; i < 9; i++){
@@ -69,6 +69,20 @@ int is_valid(Node* n){
         }
     }
     // Revisar cuadro
+    
+    for(i = 0; i < 9; i++){
+        for(j = 0; j < 9; j++){
+            for(ii = 0; ii < 9 / 9 ; ii++){
+                for(jj = 0; jj < 9 / 9 ; jj++){
+                    if(n->sudo[i + ii][j + jj]){
+                        for(k = ii * 9 + jj + 1; k < 9; k++){
+                            if(n->sudo[i + ii][j + jj] = n->sudo[i + k/9][j + k % 9]) return 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
     
     return 1;
 }

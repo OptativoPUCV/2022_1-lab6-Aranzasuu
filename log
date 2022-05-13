@@ -73,3 +73,14 @@ Fri May 13 15:58:52 UTC 2022:
  tests:  3|4
 total_score: 20/70
 6e32855
+Fri May 13 16:04:17 UTC 2022: 
+ sudoku.c | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:79:32: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+                             if(n->sudo[i + ii][j + jj] = n->sudo[i + k/9][j + k % 9]) return 0;
+                                ^
+cc1: all warnings being treated as errors
+Compilation failed
+997f0d5
