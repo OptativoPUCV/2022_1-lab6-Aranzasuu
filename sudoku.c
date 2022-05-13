@@ -76,7 +76,7 @@ int is_valid(Node* n){
                 for(jj = 0; jj < 9 / 9 ; jj++){
                     if(n->sudo[i + ii][j + jj]){
                         for(k = ii * 9 + jj + 1; k < 9; k++){
-                            if(n->sudo[i + ii][j + jj] = n->sudo[i + k/9][j + k % 9]) return 0;
+                            if(n->sudo[i + ii][j + jj] }== n->sudo[i + k/9][j + k % 9]) return 0;
                         }
                     }
                 }
