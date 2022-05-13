@@ -8,12 +8,12 @@ typedef struct{
 }Node;
 
 Node* createNode(){
-  Node* n=(Node*) malloc(sizeof(Node));
+  Node* n = (Node*) malloc(sizeof(Node));
   return n;
 }
 
 Node* copy(Node* n){
-    Node* new=(Node*) malloc(sizeof(Node));
+    Node* new = (Node*) malloc(sizeof(Node));
     *new = *n;
     return new;
 }
@@ -45,12 +45,25 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
 
+    int i, j;
+    for(i = 0; i < 9; i++){
+        for(j = 0; j < 9; j++){
+            printf("%d ", n[i][j]);
+        }
+        printf("\n");
+    }
+    
     return 1;
 }
 
 
 List* get_adj_nodes(Node* n){
-    List* list=createList();
+    List* list = createList();
+
+    
+    
+
+    
     return list;
 }
 
