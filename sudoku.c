@@ -50,14 +50,14 @@ int is_valid(Node* n){
     // Revisar por columna
     for(i = 0; i < 9; i++){
         for(j = 0; j < 9; j++){
-            if(n->sudo[0][j] == n->sudo[0][j]) return 0;
+            if(n->sudo[0][j] == n->sudo[0][j + 1]) return 0;
         }
     }
 
     // Revisar por fila
     for(i = 0; i < 9; i++){
         for(j = 0; j < 9; j++){
-            if(n->sudo[j][0] == n->sudo[j][0]) return 0;
+            if(n->sudo[j][0] == n->sudo[j + 1][0]) return 0;
         }
     }
     // Revisar cuadro
