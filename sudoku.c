@@ -46,12 +46,22 @@ void print_node(Node* n){
 int is_valid(Node* n){
 
     int i, j;
+    int copia;
+
+    // Revisar por columna
     for(i = 0; i < 9; i++){
         for(j = 0; j < 9; j++){
-            printf("%d ", n->sudo[i][j]);
+            if(n->sudo[0][j] == n->sudo[0][j]) return 0;
         }
-        printf("\n");
     }
+
+    // Revisar por fila
+    for(i = 0; i < 9; i++){
+        for(j = 0; j < 9; j++){
+            if(n->sudo[j][0] == n->sudo[j][0]) return 0;
+        }
+    }
+    // Revisar cuadro
     
     return 1;
 }
