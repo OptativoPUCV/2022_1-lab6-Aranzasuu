@@ -70,7 +70,7 @@ int is_valid(Node* n){
     }
     // Revisar cuadro
     
-    for(i = 0; i < 9; i++){
+    /*for(i = 0; i < 9; i++){
         for(j = 0; j < 9; j++){
             for(ii = 0; ii < 9 / 9 ; ii++){
                 for(jj = 0; jj < 9 / 9 ; jj++){
@@ -82,7 +82,7 @@ int is_valid(Node* n){
                 }
             }
         }
-    }
+    }*/
     
     return 1;
 }

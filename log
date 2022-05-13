@@ -113,3 +113,17 @@ sudoku.c:85:5: error: control reaches end of non-void function [-Werror=return-t
 cc1: all warnings being treated as errors
 Compilation failed
 110fe44
+Fri May 13 16:04:39 UTC 2022: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:48:22: error: unused variable ‘jj’ [-Werror=unused-variable]
+     int i, j, k, ii, jj;
+                      ^~
+sudoku.c:48:18: error: unused variable ‘ii’ [-Werror=unused-variable]
+     int i, j, k, ii, jj;
+                  ^~
+cc1: all warnings being treated as errors
+Compilation failed
+bfbf526
