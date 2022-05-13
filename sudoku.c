@@ -57,8 +57,8 @@ int is_valid(Node* n){
     }
 
     // Revisar por fila
-    for(i = 0; i < 9; i++){
-        for(j = 0; j < 9; j++){
+    for(j = 0; j < 9; j++){
+        for(i = 0; i < 9; i++){
             for(k = i + 1; k < 9; k++){
                 if(n->sudo[i][j] == n->sudo[k][j]) return 0;
             }
