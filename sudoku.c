@@ -71,19 +71,15 @@ int is_valid(Node* n){
     }
     // Revisar cuadro
     
-    /*for(i = 0; i < 9; i++){
+    for(i = 0; i < 9; i++){
+        int validar[10] = {0};
         for(j = 0; j < 9; j++){
-            for(ii = 0; ii < 9 / 9 ; ii++){
-                for(jj = 0; jj < 9 / 9 ; jj++){
-                    if(n->sudo[i + ii][j + jj]){
-                        for(k = ii * 9 + jj + 1; k < 9; k++){
-                            if(n->sudo[i + ii][j + jj] }== n->sudo[i + k/9][j + k % 9]) return 0;
-                        }
-                    }
-                }
-            }
+            int subI = i + (j / 3);
+            int subJ = 3*(j % 3) + (j % 3);
+            if(validar[n->sudo[subI][subJ]] != 0) return 0;
+            if(validar[n->sudo[subI][subJ]] == 0 && n->sudo[subI][subJ] != 0) validar[n->sudo[subI][subJ]] = 1;
         }
-    }*/
+    }
     
     return 1;
 }
