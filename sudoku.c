@@ -75,7 +75,7 @@ int is_valid(Node* n){
         int validar[10] = {0};
         for(j = 0; j < 9; j++){
             int subI = 3*(i/3) + (j / 3);
-            int subJ = 3*(j % 3) + (j % 3);
+            int subJ = 3*(i % 3) + (j % 3);
             if(validar[n->sudo[subI][subJ]] != 0) return 0;
             if(validar[n->sudo[subI][subJ]] == 0 && n->sudo[subI][subJ] != 0) validar[n->sudo[subI][subJ]] = 1;
         }
