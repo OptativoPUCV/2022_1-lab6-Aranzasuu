@@ -120,7 +120,7 @@ Node* DFS(Node* initial, int* cont){
 
     push(S, initial);
 
-    while(is_empty(S) != 0){
+    while(is_empty(S) == 0){
         Node *aux = top(S);
         pop(S);
         if(is_final(aux)) return aux;
